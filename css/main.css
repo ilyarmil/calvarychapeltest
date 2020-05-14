@@ -119,7 +119,7 @@ p {
 .section1 {
     width: 100%;
     height: 100vh;
-    background: url("/photos/new\ photos/images/Calvary-banner.jpg");
+    background: url("./photos/new\ photos/images/Calvary-banner.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -259,7 +259,7 @@ p {
 #contactsheading {
     width: 100%;
     height: 40vh;
-    background-image: url(/photos/contacts\ bacground.jpg);
+    background-image: url(./photos/contacts\ bacground.jpg);
     background-size: 100%;
     background-position: center;
     color: white;
@@ -542,7 +542,7 @@ p {
     #contactsheading {
         width: 100%;
         height: 30vh;
-        background-image: url(/photos/contacts\ bacground.jpg);
+        background-image: url(./photos/contacts\ bacground.jpg);
         background-size: 120%;
     }
     #contactsheading h2 {
