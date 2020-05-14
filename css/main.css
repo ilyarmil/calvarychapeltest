@@ -1,0 +1,561 @@
+/*****************************
+*
+*Church Website Test
+*Ilya Yarmil
+*21.04.2020
+*
+******************************/
+
+@font-face {
+    font-family: GothamPro;
+    src: url(/fonts/GothamPro.ttf);
+    font-family: GothamPro-Black;
+    src: url(/fonts/GothamPro-Black.ttf);
+    font-family: GothamPro-Bold;
+    src: url(/fonts/GothamPro-Bold.ttf);
+    font-family: GothamPro-Light;
+    src: url(/fonts/GothamPro-Light.ttf);
+    font-family: GothamPro-Medium;
+    src: url(/fonts/GothamPro-Medium.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: rgb(38, 38, 38);
+    background-color: rgb(242, 242, 242);
+    margin: 0 auto;
+    /* font-family: 'GothamPro-Black'; */
+    /* font-family: 'GothamPro-Black'; */
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 900;
+}
+
+head {
+    position: sticky;
+}
+
+a {
+    color: rgb(38, 38, 38);
+    text-decoration: none;
+}
+
+p {
+    color: rgb(38, 38, 38);
+    font-size: 120%;
+}
+
+/* #topmenu {
+    background-size: 1%;
+    position: fixed;
+    right: 1%;
+    top: 3%;
+    z-index: 2;
+}
+
+#topmenu a {
+    color: white;
+    font-size: 18px;
+    margin-right: 20px;
+    padding: 12px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #0000004f;
+}
+
+#topmenu a:hover {
+    color: rgb(109, 109, 109);
+} */
+
+.sidemenu {
+    position: fixed;
+    right: 2%;
+    top: 40vh;
+    z-index: 100;
+    color: white;
+}
+
+.sidemenu .circle {
+    /* width: 16px;
+    height: 16px; */
+    width: 20px;
+    height: 20px;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    /* margin-bottom: 15px; */
+    margin-bottom: 30px;
+}
+
+.sidemenu .circle:hover {
+    background: white;
+}
+
+.sidemenu .circle:hover span {
+    display: block;
+}
+
+.sidemenu .circle span {
+    display: none;
+    position: absolute;
+    right: 180%;
+    /* min-width: 200px; */
+    text-align: right;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: -5px;
+    animation: goUp 0.4s;
+    background: #000000e0;
+    width: auto;
+    white-space: nowrap;
+    padding: 3px 10px;
+}
+
+.section1 {
+    width: 100%;
+    height: 100vh;
+    background: url("/photos/new\ photos/images/Calvary-banner.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.center-text {
+    text-align: center;
+    color: white;
+    margin-top: 10%;
+}
+
+.center-text h1 {
+    font-size: 75px;
+    /* font-family: 'GothamPro-Black'; */
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    margin-top: 12%;
+}
+
+.center-text h2 {
+    font-size: 50px;
+    /* font-family: 'GothamPro-Black'; */
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    margin-top: -1%;
+}
+
+.center-text p {
+    font-size: 32px;
+    color: white;
+    margin-top: 4%;
+    /* font-family: 'GothamPro-Black'; */
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+}
+
+.center-text span {
+    margin: -4%;
+    margin-left: 30%;
+}
+
+.headings {
+    font-size: 40px;
+}
+
+.headings h2 {
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
+.services-method {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    grid-gap: 3%;
+    margin-top: 10vh;
+}
+
+.box {
+    display: block;
+    position: relative;
+    filter: brightness(0.5);
+    transition: 0.7s;
+}
+
+.box:hover {
+    filter: brightness(1);
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.221);
+}
+
+.box img {
+    width: 100%;
+}
+
+.box h4 {
+    z-index: 10;
+}
+
+#services .sermons {
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+    margin-top: 27%;
+}
+
+/*
+#services :hover {
+    color: rgb(38, 38, 38);
+} */
+
+.quotes {
+    width: 80%;
+    margin: 0 auto;
+    /* font-family: 'GothamPro-Black'; */
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    font-size: 25px;
+    margin-top: 9vh;
+}
+
+.quotes span {
+    /* font-family: 'GothamPro-Black'; */
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+.we-believe-method {
+    text-align: center;
+    line-height: 30px;
+}
+
+.we-believe-method {
+    margin-bottom: 70px;
+    background: #3c3c3c82;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#contactsheading {
+    width: 100%;
+    height: 40vh;
+    background-image: url(/photos/contacts\ bacground.jpg);
+    background-size: 100%;
+    background-position: center;
+    color: white;
+}
+
+#contactsheading a {
+    text-decoration: none;
+    color: white;
+}
+
+#contactsheading a :hover {
+    color: rgb(38, 38, 38);
+}
+
+.contactstext {
+    margin-left: 320px;
+    margin-top: 2.5%;
+    padding-top: 1%;
+}
+
+#contactsheading img {
+    transform: scale(0.5);
+    position: absolute;
+    margin-left: 230px;
+    margin-top: -85px;
+}
+
+/* ADJUST */
+
+/* @media screen and (min-width: 750px) {
+    .topmenu {
+        margin-top: 0%;
+        margin-right: 7%;
+        transform: scale(1.2);
+    }
+    #topmenu a {
+        color: white;
+        font-size: 20px;
+        margin-right: 5px;
+        padding: 7px 10px;
+        border-bottom: 3px solid;
+        cursor: pointer;
+        background-color: #0000004f;
+    }
+    .section1 {
+        width: 100%;
+        height: 40vh;
+        background-size: 190%;
+    }
+    .center-text {
+        margin-top: -4%;
+    }
+    .center-text h1 {
+        font-size: 60px;
+        margin-top: 12%;
+    }
+    .center-text h2 {
+        font-size: 50px;
+        margin-top: -1%;
+    }
+    .center-text span {
+        margin: -4%;
+        margin-left: 30%;
+    }
+    .headings {
+        font-size: 40px;
+    }
+    .headings h2 {
+        text-align: center;
+        position: relative;
+        top: 20px;
+    }
+    .services-method {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-gap: 2%;
+    }
+    #contactsheading {
+        width: 100%;
+        height: 30vh;
+        background-image: url(/photos/contacts\ bacground.jpg);
+        background-size: 120%;
+    }
+    #contactsheading h2 {
+        font-size: 60px;
+    }
+    #contactsheading img {
+        transform: scale(0.7);
+        position: absolute;
+        margin-left: 10%;
+        margin-top: -10%;
+    }
+    .contactstext {
+        margin-left: 20%;
+        font-size: 30px;
+    }
+} 
+ */
+
+/* @media screen and (min-width: 1200px) {
+    .topmenu {
+        margin-top: 1%;
+        margin-right: 1%;
+        transform: scale(1.0);
+    }
+    #topmenu a {
+        color: white;
+        font-size: 20px;
+        margin-right: 1px;
+    }
+    .section1 {
+        height: 100vh;
+        background-size: cover;
+    }
+    .center-text {
+        text-align: center;
+        color: white;
+        margin-top: 12%;
+    }
+    .center-text h1 {
+        font-size: 500%;
+        font-family: GothamPro-Black;
+        margin-top: 12%;
+    }
+    .center-text h2 {
+        font-size: 350%;
+        font-family: GothamPro-Black;
+        margin-top: -1%;
+    }
+    .center-text p {
+        font-size: 200%;
+        color: white;
+        margin-top: 6%;
+        font-family: GothamPro-Light;
+        font-style: light;
+    }
+    .center-text span {
+        margin-left: 40%;
+    }
+    .headings h2 {
+        text-align: center;
+        position: relative;
+        top: 20px;
+    }
+    .services-method {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        grid-gap: 2%;
+    }
+  
+    #contactsheading {
+        height: 45vh;
+    }
+    .contactstext {
+        margin-left: 21%;
+    }
+    #contactsheading img {
+        transform: scale(0.5);
+        margin-left: 13.5%;
+        margin-top: -5%;
+    }
+} */
+
+/* ANIMATIONS */
+
+@keyframes goUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Tablet Version */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .circle span {
+        display: none !important;
+    }
+    .circle {
+        width: 17px !important;
+        height: 17px !important;
+    }
+    .section1 {
+        width: 100%;
+        height: 100vh;
+        background-size: 370%;
+        background-position: left 30% top 40%;
+    }
+    .section1 h1 {
+        margin-top: 10%;
+    }
+    .section1 h2 {
+        margin-top: 5%;
+    }
+    .section1 p {
+        margin-top: 10%;
+    }
+    .services-method {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-gap: 2%;
+    }
+    #contactsheading {
+        height: 40vh;
+        background-size: cover;
+        background-position: left -5% top - 10%;
+    }
+    .contactstext {
+        margin-left: 25%;
+        margin-top: -2%;
+    }
+    #contactsheading img {
+        transform: scale(0.3);
+        margin-left: 15%;
+        margin-top: -8%;
+    }
+}
+
+/* Mobile Version */
+
+@media (max-device-width: 480px) {
+    .sidemenu .circle {
+        background-color: rgba(0, 0, 0, 0.125);
+    }
+    .circle span {
+        display: none !important;
+    }
+    .circle {
+        width: 48px !important;
+        height: 48px !important;
+    }
+    h2{
+        font-size: 80px;
+    }
+    .section1 {
+        width: 100%;
+        height: 50vh;
+        background-size: 220%;
+        background-position: left 50% top 0%;
+    }
+    .center-text h1 {
+        font-size: 80px;
+        margin-top: 10%;
+    }
+    .center-text h2 {
+        font-size: 60px;
+        margin-top: -1%;
+    }
+    .center-text p {
+        margin-top: 10%;
+        font-size: 40px;
+    }
+    .headings h2 {
+        text-align: center;
+        position: relative;
+        top: 20px;
+    }
+    .services-method {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 0%;
+    }
+    .quotes {
+        width: 50%;
+        transform: scale(1.7);
+        margin-top: 60vh;
+        margin-bottom: 58vh;
+        text-align: center;
+        
+    }
+    #contactsheading {
+        width: 100%;
+        height: 30vh;
+        background-image: url(/photos/contacts\ bacground.jpg);
+        background-size: 120%;
+    }
+    #contactsheading h2 {
+        font-size: 60px;
+    }
+    #contactsheading img {
+        transform: scale(0.7);
+        position: absolute;
+        margin-left: 10%;
+        margin-top: -10%;
+    }
+    .contactstext {
+        margin-left: 20%;
+        font-size: 30px;
+    }
+}
